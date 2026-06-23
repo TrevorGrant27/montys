@@ -14,6 +14,8 @@ body {
   margin: 0;
   padding: 0;
   background: var(--cream);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
 /* React mount point owns the full-height column layout. */
 #root {
   min-height: 100vh;
+  min-height: 100dvh; /* avoids content hiding under mobile browser chrome */
   display: flex;
   flex-direction: column;
 }
@@ -205,4 +208,37 @@ a {
 .foot a:hover {
   color: var(--brick);
   opacity: 1;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .page {
+    padding: 40px 20px;
+    gap: clamp(24px, 4.5vh, 44px);
+  }
+  /* The wordmark is white-space: nowrap, so it must never exceed the
+     viewport. Scale it down from the desktop 82px floor so it stays bold
+     yet always fits narrow phones. */
+  .wm-hero {
+    font-size: clamp(52px, 19vw, 104px);
+  }
+  /* Tagline size is relative to the wordmark; nudge the ratio up so it
+     stays legible once the wordmark shrinks. */
+  .wm-stack .tagline {
+    font-size: 0.11em;
+  }
+  .stall {
+    padding: 34px 26px 30px;
+  }
+  .foot {
+    padding: 24px 20px 28px;
+    letter-spacing: 0.18em;
+  }
+}
+
+/* Extra-narrow phones (e.g. iPhone SE) */
+@media (max-width: 340px) {
+  .page {
+    padding: 32px 16px;
+  }
 }
