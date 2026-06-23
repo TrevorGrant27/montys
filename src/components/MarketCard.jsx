@@ -1,12 +1,7 @@
-// The navy "stall ticket" card: where + when we're at the market.
+// The navy "stall ticket" card: when + where we're at the market.
 export default function MarketCard() {
   return (
     <section className="stall">
-      <span className="eyebrow">
-        <span className="dot" aria-hidden="true" />
-        Catch us at the market
-      </span>
-
       <p className="when">
         Sundays
         <br />

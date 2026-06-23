@@ -132,18 +132,6 @@ a {
   font-size: clamp(82px, 15vw, 188px);
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.35);
-    opacity: 0.6;
-  }
-}
-
 /* ---------- Stall ticket card ---------- */
 .stall {
   position: relative;
@@ -169,24 +157,6 @@ a {
   position: relative;
 }
 
-.stall .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--cream);
-  opacity: 0.85;
-}
-.stall .eyebrow .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--brick);
-  animation: pulse 2.4s ease-in-out infinite;
-}
 .stall .when {
   font-family: 'Sansita', serif;
   font-weight: 900;
@@ -194,7 +164,7 @@ a {
   line-height: 0.96;
   letter-spacing: -0.01em;
   color: var(--cream);
-  margin: 14px 0 4px;
+  margin: 0 0 4px;
 }
 .stall .when .accent {
   color: var(--brick);
