@@ -1,7 +1,4 @@
-import SignupForm from './SignupForm.jsx';
-
-// The navy "stall ticket" card: where + when we're at the market, plus the
-// SMS signup.
+// The navy "stall ticket" card: where + when we're at the market.
 export default function MarketCard() {
   return (
     <section className="stall">
@@ -20,12 +17,6 @@ export default function MarketCard() {
         <br />
         Hill Country Galleria
       </p>
-
-      <div className="rule" />
-
-      <p className="signup-label">Get a text for new flavors &amp; popups</p>
-      <SignupForm />
-      <p className="signup-fine">Reply STOP to unsubscribe.</p>
     </section>
   );
 }
