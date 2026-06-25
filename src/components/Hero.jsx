@@ -1,9 +1,9 @@
-import Wordmark from './Wordmark.jsx';
-
+// Hand-lettered "Monty's" wordmark with the "bagels and appetizing" tagline.
 export default function Hero() {
   return (
     <section className="hero">
-      <Wordmark className="wm-hero" />
+      <h1 className="wm">Monty&rsquo;s</h1>
+      <span className="tagline">bagels and appetizing</span>
     </section>
   );
 }
