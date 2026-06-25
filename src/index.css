@@ -1,8 +1,8 @@
 :root {
-  --navy: #1e2a3e;
-  --cream: #efe3cb;
-  --brick: #b04a2e;
-  --rule: rgba(30, 42, 62, 0.22);
+  --ink: #0f47c4; /* cobalt */
+  --paper: #f7f5ef; /* eggshell white */
+  --wm-font: 'Caveat', cursive; /* hand-lettered display face */
+  --wm-scale: 1.06; /* optical scale tuned for Caveat */
 }
 
 * {
@@ -13,232 +13,99 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--cream);
-  overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Söhne', 'Söhne Web', -apple-system, BlinkMacSystemFont,
-    'Hanken Grotesk', system-ui, sans-serif;
-  color: var(--navy);
-  font-feature-settings: 'ss01' 1, 'kern' 1;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-/* React mount point owns the full-height column layout. */
-#root {
-  min-height: 100vh;
-  min-height: 100dvh; /* avoids content hiding under mobile browser chrome */
-  display: flex;
-  flex-direction: column;
 }
 
 a {
   color: inherit;
 }
 
-/* ---------- Grain overlay ---------- */
-.grain-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 50;
-  background-image: radial-gradient(rgba(40, 30, 15, 0.05) 1px, transparent 1.2px),
-    radial-gradient(rgba(40, 30, 15, 0.03) 1px, transparent 1.2px);
-  background-size: 3px 3px, 5px 5px;
-  background-position: 0 0, 1px 2px;
-  mix-blend-mode: multiply;
-  opacity: 0.5;
-}
-
-/* ---------- Wordmark ---------- */
-.wm {
-  font-family: 'Sansita', 'Cooper Old Style', Georgia, serif;
-  font-weight: 900;
-  letter-spacing: -0.015em;
-  line-height: 0.9;
-  white-space: nowrap;
-  display: inline-block;
-  font-feature-settings: 'kern' 1;
-  color: var(--navy);
-}
-.wm .kern-ty {
-  margin-left: 0.022em;
-}
-.wm .kern-yap {
-  margin-left: 0.028em;
-}
-.wm .ap {
-  font-family: 'Sansita', serif;
-  font-style: italic;
-  font-weight: 900;
-  display: inline-block;
-  transform: translate(-0.02em, -0.04em);
-  margin-right: -0.04em;
-}
-
-.wm-stack {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-}
-.wm-stack .wm-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: var(--brick);
-  transform: translate(0.022em, 0.022em);
-  z-index: 0;
-  user-select: none;
-}
-.wm-stack .wm-top {
-  position: relative;
-  z-index: 1;
-}
-.wm-stack .tagline {
-  margin-top: 0.6em;
-  font-family: 'Söhne', 'Hanken Grotesk', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--navy);
-  font-size: 0.09em;
-}
-.wm-stack .tagline-heart {
-  display: inline-block;
-  width: 0.95em;
-  height: 0.95em;
-  margin: 0 0.45em;
-  vertical-align: -0.12em;
-  color: var(--brick);
-}
-
 /* ---------- Layout ---------- */
 .page {
-  flex: 1;
+  min-height: 100vh;
+  min-height: 100dvh; /* avoids content hiding under mobile browser chrome */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 48px 28px;
-  gap: clamp(28px, 5vh, 52px);
+  padding: 64px 28px 40px;
+  gap: clamp(26px, 4.5vh, 44px);
 }
 
+/* ---------- Hand-lettered wordmark ---------- */
 .hero {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
-.wm-hero {
-  font-size: clamp(82px, 15vw, 188px);
-}
-
-/* ---------- Stall ticket card ---------- */
-.stall {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  background: var(--navy);
-  color: var(--cream);
-  border-radius: 22px;
-  padding: 40px 36px 34px;
-  text-align: center;
-  box-shadow: 0 30px 60px -28px rgba(30, 42, 62, 0.55), 0 2px 0 0 var(--brick);
-}
-/* perforated inner keyline */
-.stall::before {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  border: 1px dashed rgba(239, 227, 203, 0.28);
-  border-radius: 14px;
-  pointer-events: none;
-}
-.stall > * {
-  position: relative;
-}
-
-.stall .when {
-  font-family: 'Sansita', serif;
-  font-weight: 900;
-  font-size: clamp(40px, 9vw, 56px);
-  line-height: 0.96;
-  letter-spacing: -0.01em;
-  color: var(--cream);
-  margin: 0 0 4px;
-}
-.stall .when .accent {
-  color: var(--brick);
-}
-.stall .where {
-  font-size: clamp(15px, 2.4vw, 17px);
-  line-height: 1.45;
+.wm {
+  font-family: var(--wm-font);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 0.9;
+  font-size: calc(clamp(96px, 19vw, 240px) * var(--wm-scale));
+  transform: rotate(-2.5deg);
   margin: 0;
-  opacity: 0.86;
 }
-.stall .where b {
-  font-weight: 600;
-  opacity: 1;
+.tagline {
+  font-family: var(--wm-font);
+  font-weight: 700;
+  font-size: calc(clamp(32px, 5.4vw, 50px) * var(--wm-scale));
+  color: var(--ink);
+  margin-top: 6px;
+}
+
+/* ---------- When / where ---------- */
+.when {
+  font-family: var(--wm-font);
+  font-weight: 700;
+  font-size: calc(clamp(54px, 10vw, 104px) * var(--wm-scale));
+  line-height: 0.86;
+  margin: 0;
+  transform: rotate(-1deg);
+}
+.where {
+  font-size: clamp(14px, 2.1vw, 17px);
+  line-height: 1.5;
+  margin: 18px 0 0;
+  font-weight: 500;
+  opacity: 0.72;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.where .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+  display: inline-block;
 }
 
 /* ---------- Footer ---------- */
 .foot {
-  padding: 28px 32px 32px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 8px 18px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--navy);
-  opacity: 0.75;
+  gap: 12px;
+  font-size: 15px;
+  opacity: 0.7;
+  margin-top: 8px;
 }
-.foot .sep {
-  opacity: 0.4;
-}
-.foot a {
+.foot .handle {
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  transition: color 0.15s;
-}
-.foot a:hover {
-  color: var(--brick);
-  opacity: 1;
-}
-
-/* ---------- Mobile ---------- */
-@media (max-width: 480px) {
-  .page {
-    padding: 40px 20px;
-    gap: clamp(24px, 4.5vh, 44px);
-  }
-  /* The wordmark is white-space: nowrap, so it must never exceed the
-     viewport. Scale it down from the desktop 82px floor so it stays bold
-     yet always fits narrow phones. */
-  .wm-hero {
-    font-size: clamp(52px, 19vw, 104px);
-  }
-  /* Tagline size is relative to the wordmark; nudge the ratio up so it
-     stays legible once the wordmark shrinks. */
-  .wm-stack .tagline {
-    font-size: 0.11em;
-  }
-  .stall {
-    padding: 34px 26px 30px;
-  }
-  .foot {
-    padding: 24px 20px 28px;
-    letter-spacing: 0.18em;
-  }
-}
-
-/* Extra-narrow phones (e.g. iPhone SE) */
-@media (max-width: 340px) {
-  .page {
-    padding: 32px 16px;
-  }
 }
