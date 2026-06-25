@@ -1,6 +1,7 @@
 :root {
-  --ink: #0f47c4; /* cobalt */
-  --paper: #f7f5ef; /* eggshell white */
+  --ink: #0f47c4; /* cobalt — hand-lettered display type */
+  --bg: #0a1a2f; /* dark navy page background */
+  --paper: #f7f5ef; /* eggshell — sans body & footer text */
   --wm-font: 'Caveat', cursive; /* hand-lettered display face */
   --wm-scale: 1.06; /* optical scale tuned for Caveat */
 }
@@ -17,8 +18,8 @@ body {
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--paper);
   font-family: 'Hanken Grotesk', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -69,6 +70,7 @@ a {
 .when {
   font-family: var(--wm-font);
   font-weight: 700;
+  color: var(--ink);
   font-size: calc(clamp(54px, 10vw, 104px) * var(--wm-scale));
   line-height: 0.86;
   margin: 0;
