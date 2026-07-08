@@ -35,7 +35,7 @@ src/
 
 ## Design notes
 
-- Cobalt **ink** on eggshell **paper** (`--ink #1300CA`, `--paper #F7F5EF`),
+- Cobalt **ink** on soft-white **paper** (`--ink #1300CA`, `--paper #FBFBF9`),
   with a single warm accent — **gold** (`--gold #F2B01E`) — used only on the
   order button so the one thing to click carries the one pop of color.
 - The wordmark and crew illustration are the real brand art (transparent PNGs
