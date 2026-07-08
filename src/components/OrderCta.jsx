@@ -11,8 +11,8 @@ export default function OrderCta() {
       <p className="details">
         Everything is house-made using fresh, high quality, locally sourced
         ingredients. Expect rotating specials with unique, seasonal flavors.
-        Pre-orders close Friday for Sunday pick up. We bake the bagels right
-        before you get them.
+        Pre-orders close Friday for Sunday pick up. We boil and bake the bagels
+        right before you get them.
       </p>
       <a className="order-btn" href={HOTPLATE_URL} target="_blank" rel="noopener">
         Order on Hotplate
