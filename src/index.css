@@ -37,8 +37,8 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: clamp(36px, 6vh, 64px) 28px 44px;
-  gap: clamp(28px, 4.5vh, 44px);
+  padding: clamp(32px, 5vh, 52px) 28px 40px;
+  gap: clamp(24px, 3.6vh, 36px);
 }
 /* center vertically when there's room, scroll normally when there isn't
    (justify-content: center would clip the top on short screens) */
@@ -61,11 +61,21 @@ a {
   height: auto;
   transform: rotate(-2.5deg);
 }
+.loc {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.7vw, 15px);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin: clamp(6px, 1.4vw, 12px) 0 0;
+  padding-left: 0.28em; /* optical: balance the trailing letter-spacing */
+  opacity: 0.8;
+}
 .crew {
   display: block;
-  width: clamp(220px, 42vw, 380px);
+  width: clamp(210px, 40vw, 350px);
   height: auto;
-  margin-top: clamp(16px, 2.5vh, 26px);
+  margin-top: clamp(12px, 2vh, 18px);
 }
 
 /* ---------- Order CTA ---------- */
@@ -73,7 +83,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(18px, 3vw, 26px);
+  gap: clamp(16px, 2.4vw, 22px);
   max-width: 34rem;
 }
 .pitch {

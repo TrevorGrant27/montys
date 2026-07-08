@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <img className="wm-logo" src={logo} alt="Monty&rsquo;s" />
+      <p className="loc">Austin, Texas</p>
       <img
         className="crew"
         src={crew}

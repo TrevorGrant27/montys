@@ -27,7 +27,7 @@ src/
     montys-logo.png     # hand-drawn "Monty's" wordmark (transparent PNG)
     montys-crew.png     # the crew illustration (transparent PNG)
   components/
-    Hero.jsx            # wordmark logo + crew illustration
+    Hero.jsx            # wordmark logo + "Austin, Texas" kicker + crew
     OrderCta.jsx        # pitch + details copy + "Order on Hotplate" button
 ```
 

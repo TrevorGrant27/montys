@@ -1,6 +1,6 @@
 // Single job: tell people what Monty's is, then get them to Hotplate.
 // TODO: confirm the real Hotplate storefront URL.
-const HOTPLATE_URL = 'https://www.hotplate.com/montysatx';
+const HOTPLATE_URL = 'https://www.hotplate.com/montys';
 
 export default function OrderCta() {
   return (
