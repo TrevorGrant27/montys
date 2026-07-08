@@ -55,11 +55,11 @@ a {
   transform: rotate(-2.5deg);
 }
 .tagline {
-  font-family: var(--wm-font);
-  font-weight: 700;
-  font-size: calc(clamp(32px, 5.4vw, 50px) * var(--wm-scale));
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(22px, 3.8vw, 34px);
   color: var(--ink);
-  margin-top: 6px;
+  margin-top: 10px;
 }
 .crew {
   display: block;
@@ -76,10 +76,11 @@ a {
   gap: 20px;
 }
 .order-note {
-  font-family: var(--wm-font);
-  font-weight: 700;
-  font-size: calc(clamp(28px, 5vw, 44px) * var(--wm-scale));
-  line-height: 1;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 2.6vw, 21px);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
   margin: 0;
   transform: rotate(-1deg);
 }
