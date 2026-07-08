@@ -29,7 +29,6 @@ src/
   components/
     Hero.jsx            # wordmark logo + tagline + crew illustration
     OrderCta.jsx        # "Order on Hotplate" button (the page's one job)
-    BagelScroll.jsx     # horizontal snap-scroll shelf of bagel shots
     Footer.jsx          # "Find us @montysatx"
 ```
 
@@ -39,18 +38,15 @@ src/
   (`--ink #0F47C4`, `--paper #F7F5EF`).
 - The wordmark and crew illustration are the real brand art (transparent PNGs
   in `src/assets/`), not rendered type.
-- Display/heading type is **Caveat** (tagline, CTA, card captions); body/UI is
-  **Hanken Grotesk** (both via Google Fonts).
+- Type: the tagline is **Fraunces**; the drop note and CTA button are
+  **Josefin Sans**; body/UI is **Hanken Grotesk** (all via Google Fonts).
 - Elements are nudged off-axis (`rotate(±1–2.5deg)`) to keep the hand-drawn
-  feel; the bagel cards alternate tilt directions down the shelf.
+  feel.
 
-## Hotplate + photos
+## Hotplate
 
 - The whole page drives to one CTA: **Order on Hotplate** (`OrderCta.jsx`).
   Update `HOTPLATE_URL` there with the real storefront link.
-- `BagelScroll.jsx` currently renders drawn bagel tiles; when photos of the
-  bagels are ready, swap each tile's `<BagelDoodle />` for an `<img>` (the
-  `.card-ph img` styles already handle the crop).
 
 ## Deploy
 
@@ -60,4 +56,6 @@ Vercel, Cloudflare Pages, GitHub Pages, S3, …).
 ## Roadmap
 
 - Confirm the real Hotplate storefront URL in `OrderCta.jsx`.
-- Drop real bagel photos into the `BagelScroll` shelf.
+- Add a scroll of bagel photos once shots are ready.
+- Reintroduce the "Follow @montysatx to catch the next drop" line under the
+  CTA if it earns its place visually.

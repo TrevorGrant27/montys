@@ -9,13 +9,6 @@ export default function OrderCta() {
       <a className="order-btn" href={HOTPLATE_URL} target="_blank" rel="noopener">
         Order on Hotplate
       </a>
-      <p className="order-sub">
-        Follow{' '}
-        <a href="https://instagram.com/montysatx" target="_blank" rel="noopener">
-          @montysatx
-        </a>{' '}
-        to catch the next drop
-      </p>
     </section>
   );
 }
