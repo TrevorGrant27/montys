@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div className="foot">
-      <span>Find us</span>
+    <p className="foot">
+      find us{' '}
       <a
         className="handle"
         href="https://instagram.com/montysatx"
@@ -10,6 +10,6 @@ export default function Footer() {
       >
         @montysatx
       </a>
-    </div>
+    </p>
   );
 }

@@ -38,8 +38,9 @@ src/
   (`--ink #0F47C4`, `--paper #F7F5EF`).
 - The wordmark and crew illustration are the real brand art (transparent PNGs
   in `src/assets/`), not rendered type.
-- Type: the tagline is **Fraunces**; the drop note and CTA button are
-  **Josefin Sans**; body/UI is **Hanken Grotesk** (all via Google Fonts).
+- Type: everything is **Fraunces** (Google Fonts variable: italic + weight +
+  optical size) — one supporting voice so nothing competes with the wordmark.
+  Tagline and footer are italic; the drop note and button are roman.
 - Elements are nudged off-axis (`rotate(±1–2.5deg)`) to keep the hand-drawn
   feel.
 
