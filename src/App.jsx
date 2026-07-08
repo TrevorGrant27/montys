@@ -1,13 +1,11 @@
 import Hero from './components/Hero.jsx';
-import Schedule from './components/Schedule.jsx';
-import Footer from './components/Footer.jsx';
+import OrderCta from './components/OrderCta.jsx';
 
 export default function App() {
   return (
     <main className="page">
       <Hero />
-      <Schedule />
-      <Footer />
+      <OrderCta />
     </main>
   );
 }

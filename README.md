@@ -22,22 +22,32 @@ index.html              # app shell + Google Fonts + meta tags
 src/
   main.jsx              # React entry
   App.jsx               # page composition
-  index.css             # all styles (ported 1:1 from the design)
+  index.css             # all styles
+  assets/
+    montys-logo.png     # hand-drawn "Monty's" wordmark (transparent PNG)
+    montys-crew.png     # the crew illustration (transparent PNG)
   components/
-    Hero.jsx            # hand-lettered "Monty's" wordmark + tagline
-    Schedule.jsx        # when/where we're at the market
-    Footer.jsx          # "Find us @montysatx"
+    Hero.jsx            # wordmark logo + "Austin, Texas" kicker + crew
+    OrderCta.jsx        # pitch + details copy + "Order on Hotplate" button
 ```
 
 ## Design notes
 
-- A two-color, hand-lettered look: cobalt **ink** on eggshell **paper**
-  (`--ink #0F47C4`, `--paper #F7F5EF`).
-- Display/heading type is **Caveat** (the hand-lettered wordmark, tagline, and
-  schedule); body/UI is **Hanken Grotesk** (both via Google Fonts).
-- The wordmark and schedule are nudged off-axis (`rotate(-2.5deg)` /
-  `rotate(-1deg)`) for a hand-drawn feel; `--wm-scale` optically tunes the
-  display sizes.
+- Cobalt **ink** on eggshell **paper** (`--ink #1300CA`, `--paper #F7F5EF`),
+  with a single warm accent — **gold** (`--gold #F2B01E`) — used only on the
+  order button so the one thing to click carries the one pop of color.
+- The wordmark and crew illustration are the real brand art (transparent PNGs
+  in `src/assets/`), not rendered type.
+- Type: the pitch line is **Fraunces** (Google Fonts variable serif); the
+  details paragraph is **Josefin Sans** for readability at small sizes.
+- Elements are nudged off-axis (`rotate(±1–2.5deg)`) to keep the hand-drawn
+  feel.
+
+## Hotplate
+
+- The whole page drives to one CTA: **Order on Hotplate** (`OrderCta.jsx`) —
+  intentionally the only outbound link. Update `HOTPLATE_URL` there with the
+  real storefront link.
 
 ## Deploy
 
@@ -46,6 +56,5 @@ Vercel, Cloudflare Pages, GitHub Pages, S3, …).
 
 ## Roadmap
 
-- **Square ordering** — the design doesn't include an order button yet. When
-  you're ready, an "Order on Square" CTA can drop into the hero linking to your
-  Square Online / checkout URL.
+- Confirm the real Hotplate storefront URL in `OrderCta.jsx`.
+- Add a vertical scroll of bagel photos once shots are ready.
