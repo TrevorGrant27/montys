@@ -18,7 +18,9 @@ npm run preview    # preview the production build locally
 ## Project structure
 
 ```
-index.html              # app shell + Google Fonts + meta tags
+index.html              # app shell + Google Fonts + meta tags (incl. OG/Twitter)
+public/
+  og-image.png          # 1200x630 link-preview image (served at site root)
 src/
   main.jsx              # React entry
   App.jsx               # page composition
@@ -48,6 +50,14 @@ src/
 - The whole page drives to one CTA: **Order on Hotplate** (`OrderCta.jsx`) —
   intentionally the only outbound link. Update `HOTPLATE_URL` there with the
   real storefront link.
+
+## Link previews (Open Graph)
+
+- Sharing the URL renders `public/og-image.png` (wordmark + "Austin, Texas" +
+  the crew, 1200×630). The `og:image`/`twitter:image` tags in `index.html`
+  use the absolute URL `https://www.montysatx.com/og-image.png` — social
+  scrapers require an absolute URL, so if the domain changes, update those
+  tags to match.
 
 ## Deploy
 
