@@ -1,12 +1,11 @@
 import logo from '../assets/montys-logo.png';
 import crew from '../assets/montys-crew.png';
 
-// Hand-lettered "Monty's" wordmark logo with the "bagels and appetizing" tagline.
+// Hand-drawn "Monty's" wordmark logo + the crew illustration.
 export default function Hero() {
   return (
     <section className="hero">
       <img className="wm-logo" src={logo} alt="Monty&rsquo;s" />
-      <span className="tagline">bagels and appetizing</span>
       <img
         className="crew"
         src={crew}

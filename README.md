@@ -27,9 +27,9 @@ src/
     montys-logo.png     # hand-drawn "Monty's" wordmark (transparent PNG)
     montys-crew.png     # the crew illustration (transparent PNG)
   components/
-    Hero.jsx            # wordmark logo + tagline + crew illustration
-    OrderCta.jsx        # "Order on Hotplate" button (the page's one job)
-    Footer.jsx          # "Find us @montysatx"
+    Hero.jsx            # wordmark logo + crew illustration
+    OrderCta.jsx        # pitch + details copy + "Order on Hotplate" button
+    Footer.jsx          # "find us @montysatx"
 ```
 
 ## Design notes
@@ -40,7 +40,8 @@ src/
   in `src/assets/`), not rendered type.
 - Type: everything is **Fraunces** (Google Fonts variable: italic + weight +
   optical size) — one supporting voice so nothing competes with the wordmark.
-  Tagline and footer are italic; the drop note and button are roman.
+  The pitch line and button are roman; the details paragraph and footer are
+  italic.
 - Elements are nudged off-axis (`rotate(±1–2.5deg)`) to keep the hand-drawn
   feel.
 
