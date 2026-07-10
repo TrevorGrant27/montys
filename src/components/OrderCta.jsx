@@ -6,7 +6,7 @@ export default function OrderCta() {
   return (
     <section className="order">
       <p className="pitch">
-        Perfectly crunchy and chewy bagels with ridiculously good schmear.
+        Perfectly soft and chewy bagels with ridiculously good schmear.
       </p>
       <p className="details">
         Everything is house-made using fresh, high quality, locally sourced
