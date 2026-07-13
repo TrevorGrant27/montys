@@ -49,20 +49,38 @@ a {
   margin-bottom: auto;
 }
 
-/* ---------- Hero: wordmark + crew lockup + tagline ---------- */
+/* ---------- Hero: wordmark + location + crew ---------- */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.wm-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(480px, 80vw);
+  max-height: 17vh;
+  transform: rotate(-2.5deg);
+}
+.loc {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.7vw, 15px);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin: clamp(8px, 1.6vh, 14px) 0 0;
+  padding-left: 0.28em; /* optical: balance the trailing letter-spacing */
+  opacity: 0.8;
+}
 .crew {
   display: block;
   width: auto;
   height: auto;
-  /* as big as possible while leaving room for the copy below the lockup —
-     the height cap keeps the whole page above the fold */
-  max-width: min(600px, 88vw);
-  max-height: 46vh;
+  margin-top: clamp(12px, 2vh, 18px);
+  /* height caps keep the whole page above the fold */
+  max-width: min(560px, 88vw);
+  max-height: 30vh;
 }
 /* short screens (small laptops, small phones): tighten the frame so the
    whole page still lands above the fold */
@@ -72,19 +90,12 @@ a {
     padding-bottom: 28px;
     gap: 20px;
   }
-  .crew {
-    max-height: 38vh;
+  .wm-logo {
+    max-height: 14vh;
   }
-}
-.loc {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 500;
-  font-size: clamp(12px, 1.7vw, 15px);
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  margin: clamp(10px, 2vh, 16px) 0 0;
-  padding-left: 0.28em; /* optical: balance the trailing letter-spacing */
-  opacity: 0.8;
+  .crew {
+    max-height: 26vh;
+  }
 }
 
 /* ---------- Order CTA ---------- */
