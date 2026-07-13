@@ -49,17 +49,16 @@ a {
   margin-bottom: auto;
 }
 
-/* ---------- Hero: wordmark + tagline + crew ---------- */
+/* ---------- Hero: wordmark + crew lockup + tagline ---------- */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.wm-logo {
+.crew {
   display: block;
-  width: clamp(260px, 58vw, 600px);
+  width: clamp(280px, 62vw, 600px);
   height: auto;
-  transform: rotate(-2.5deg);
 }
 .loc {
   font-family: 'Josefin Sans', sans-serif;
@@ -67,15 +66,9 @@ a {
   font-size: clamp(12px, 1.7vw, 15px);
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  margin: clamp(6px, 1.4vw, 12px) 0 0;
+  margin: clamp(10px, 2vh, 16px) 0 0;
   padding-left: 0.28em; /* optical: balance the trailing letter-spacing */
   opacity: 0.8;
-}
-.crew {
-  display: block;
-  width: clamp(210px, 40vw, 350px);
-  height: auto;
-  margin-top: clamp(12px, 2vh, 18px);
 }
 
 /* ---------- Order CTA ---------- */
