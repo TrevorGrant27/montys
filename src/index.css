@@ -57,8 +57,24 @@ a {
 }
 .crew {
   display: block;
-  width: clamp(280px, 62vw, 600px);
+  width: auto;
   height: auto;
+  /* as big as possible while leaving room for the copy below the lockup —
+     the height cap keeps the whole page above the fold */
+  max-width: min(600px, 88vw);
+  max-height: 46vh;
+}
+/* short screens (small laptops, small phones): tighten the frame so the
+   whole page still lands above the fold */
+@media (max-height: 820px) {
+  .page {
+    padding-top: 24px;
+    padding-bottom: 28px;
+    gap: 20px;
+  }
+  .crew {
+    max-height: 38vh;
+  }
 }
 .loc {
   font-family: 'Josefin Sans', sans-serif;
