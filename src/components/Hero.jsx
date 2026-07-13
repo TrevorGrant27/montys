@@ -1,17 +1,15 @@
-import logo from '../assets/montys-logo.png';
 import crew from '../assets/montys-crew.png';
 
-// Hand-drawn "Monty's" wordmark logo + the crew illustration.
+// One lockup: hand-drawn "Monty's" wordmark with the crew illustration below it.
 export default function Hero() {
   return (
     <section className="hero">
-      <img className="wm-logo" src={logo} alt="Monty&rsquo;s" />
-      <p className="loc">Austin, Texas</p>
       <img
         className="crew"
         src={crew}
-        alt="Four illustrated Monty&rsquo;s crew members, one holding a donut"
+        alt="Monty&rsquo;s wordmark above four illustrated crew members, one holding a donut"
       />
+      <p className="loc">Austin, Texas</p>
     </section>
   );
 }
