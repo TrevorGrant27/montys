@@ -10,7 +10,7 @@ export default function Hero() {
       <img
         className="crew"
         src={crew}
-        alt="Four illustrated deli counter guys, one holding a bagel"
+        alt="Four illustrated Monty&rsquo;s crew members, one holding a donut"
       />
     </section>
   );
